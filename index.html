@@ -151,6 +151,7 @@
                   //set popup text
                   //You can adjust the values of the popup to match the headers of your CSV.
                   // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
+                  var temp = e.features[0].properties.Phone;
                   var description =
                     `<h3>` +
                     e.features[0].properties.Name +
@@ -165,7 +166,7 @@
                     `<b>` +
                     `Phone: ` +
                     `</b>` +
-                     `<a href=e.features[0].properties.Phone>e.features[0].properties.Phone</a>` +
+                     `<a href=` + temp +`>`+ e.features[0].properties.Phone + `</a>` +
                     `</h4>`;
                   //<Header name="Access-Control-Allow-Origin">*</Header>;
                   //header("Access-Control-Allow-Origin: https://docs.google.com/spreadsheets/d/1zMNim0MvEXkKJoVKIAwxcp5zZXvl2DchO9LqUB_GoVs/gviz/tq?tqx=out:csv&sheet=Sheet1");
